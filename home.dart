@@ -1,4 +1,8 @@
 void main() {
   String nome = 'Danilo';
-  print(nome + ' é um desenvolvedor Flutter.');
+  boasvindas(nome);
+}
+
+void boasvindas(String nome) {
+  print('Bem-vindo, ' + nome + '!');
 }
