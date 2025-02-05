@@ -25,3 +25,9 @@ Response convertBytes(Request request) async {
     return Response.internalServerError(body: jsonEncode({'error': e.toString()}));
   }
 }
+
+void main() async {
+  final handler = const Pipeline().addMiddleware(logRequests()).addHandler(convertBytes);
+  final server = await shelf_io.serve(handler, 'localhost', 8080);
+    print('Servidor rodando em http://${server.address.host}:${server.port}');
+}
