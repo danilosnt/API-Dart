@@ -1,8 +1,8 @@
 name: API_Dart
 descripttion: "Api e cliente para conversão de bytes"
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <4.0.0"
 
 dependencies:
   shelf: ^1.4.1
-  http: ^0.13.4
+  http: ^0.13.0
