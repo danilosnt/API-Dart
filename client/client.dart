@@ -17,3 +17,9 @@ Future<void> convertBytes(int bytes) async {
   } 
 }
 
+void main() async {
+  await convertBytes(1024);
+  await convertBytes(1048576);
+  await convertBytes(1073741824);
+  await convertBytes(1099511627776);
+}
