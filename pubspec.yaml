@@ -1,8 +1,9 @@
-void main() {
-  String nome = 'Danilo';
-  boasvindas(nome);
-}
+name: API-Dart
+descripttion: "Api e cliente para conversão de bytes"
+environment:
+  sdk: ">=2.7.0 <3.0.0"
 
-void boasvindas(String nome) {
-  print('Bem-vindo, ' + nome + '!');
-}
+dependencies:
+  shelf: ^1.4.1
+  http: ^0.13.4
+  
