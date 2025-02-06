@@ -20,14 +20,26 @@ Future<void> convertBytes(int bytes) async {
 }
 
 void main() async {
-  // Lê a entrada do usuário no terminal
-  print('Digite o número de bytes para conversão:');
-  String? input = stdin.readLineSync(); // Lê a linha de entrada como string
+  while (true) {
+    // Lê a entrada do usuário no terminal
+    print('\nDigite o número de bytes para conversão:');
+    String? input = stdin.readLineSync();
 
-  if (input != null && int.tryParse(input) != null) {
-    int bytes = int.parse(input); // Converte a entrada para inteiro
-    await convertBytes(bytes); // Chama a função para conversão
-  } else {
-    print('Entrada inválida. Por favor, insira um número inteiro válido.');
+    if (input != null && int.tryParse(input) != null) {
+      int bytes = int.parse(input);
+      await convertBytes(bytes);
+    } else {
+      print('Entrada inválida. Por favor, insira um número inteiro válido.');
+      continue; // Retorna ao início do loop
+    }
+
+    // Pergunta ao usuário se deseja converter outro valor
+    print('\nDeseja converter outro valor? (s/n)');
+    String? resposta = stdin.readLineSync()?.trim().toLowerCase();
+
+    if (resposta != 's') {
+      print('Encerrando o programa...');
+      break;
+    }
   }
 }
