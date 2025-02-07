@@ -6,7 +6,7 @@ Future<Response> convertBytes(Request request) async {
   try {
     final queryParams = request.url.queryParameters;
     if (!queryParams.containsKey('bytes')) {
-      return Response.badRequest(body: jsonEncode({'error': 'Parâmetro "bytes" é obrigatório'}));
+      return Response.badRequest(body: jsonEncode({'error': 'Parameter "bytes" is required'}));
     }
 
     final int bytes = int.parse(queryParams['bytes']!);
@@ -28,5 +28,5 @@ void main() async {
   final handler = const Pipeline().addMiddleware(logRequests()).addHandler(convertBytes);
 
   final server = await shelf_io.serve(handler, 'localhost', 8080);
-  print('Servidor rodando em http://${server.address.host}:${server.port}');
+  print('Server running at http://${server.address.host}:${server.port}');
 }
