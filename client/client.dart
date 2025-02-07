@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'dart:io'; // Importa a biblioteca para ler entradas do terminal
+import 'dart:io';
 import 'package:http/http.dart' as http;
 
 Future<void> convertBytes(int bytes) async {
@@ -21,7 +21,7 @@ Future<void> convertBytes(int bytes) async {
 
 void main() async {
   while (true) {
-    // Lê a entrada do usuário no terminal
+    
     print('\nDigite o número de bytes para conversão:');
     String? input = stdin.readLineSync();
 
@@ -30,14 +30,13 @@ void main() async {
       await convertBytes(bytes);
     } else {
       print('Entrada inválida. Por favor, insira um número inteiro válido.');
-      continue; // Retorna ao início do loop
+      continue;
     }
 
-    // Pergunta ao usuário se deseja converter outro valor
-    print('\nDeseja converter outro valor? (s/n)');
+    print('\nDeseja converter outro valor? \n Digite "yes" para continuar ou qualquer outra tecla para sair.');
     String? resposta = stdin.readLineSync()?.trim().toLowerCase();
 
-    if (resposta != 's') {
+    if (resposta != 'yes') {
       print('Encerrando o programa...');
       break;
     }
