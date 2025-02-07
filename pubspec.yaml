@@ -1,5 +1,5 @@
 name: API_Dart
-descripttion: "Api e cliente para conversão de bytes"
+descripttion: " Api and client to byte conversion"
 environment:
   sdk: ">=2.12.0 <4.0.0"
 
