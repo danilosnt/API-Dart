@@ -9,3 +9,5 @@
 3 - After, in the terminal, run the ```dart client/client.dart```
 
 4 - Follow the instructions in the code.
+
+Note: You need to install the Dart extensions in your VS Code.
