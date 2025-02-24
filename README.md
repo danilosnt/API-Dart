@@ -18,7 +18,8 @@
 - Displays the converted values in the terminal.
 
 ```client/client.dart```: Script that makes requests to the server and processes responses.
-
-
+- Listens for HTTP requests on port 8080.
+- Processes byte conversions to KB, MB, GB, and TB.
+- Returns the converted values in JSON format.
 
 Note: You need to install the Dart extensions in your VS Code.
