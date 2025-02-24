@@ -10,4 +10,11 @@
 
 4 - Follow the instructions in the code.
 
+<h3>Structure</h3>
+
+```api/server.dart```: The main script that initializes the server.
+```client/client.dart```: Script that makes requests to the server and processes responses.
+
+
+
 Note: You need to install the Dart extensions in your VS Code.
