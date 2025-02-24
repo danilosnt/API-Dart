@@ -13,6 +13,9 @@
 <h3>Structure</h3>
 
 ```api/server.dart```: The main script that initializes the server.
+- Prompts the user to enter a number of bytes.
+- Sends an HTTP request to the server for conversion.
+- Displays the converted values in the terminal.
 
 ```client/client.dart```: Script that makes requests to the server and processes responses.
 
